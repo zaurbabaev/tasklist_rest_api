@@ -23,7 +23,7 @@
 
     <select id="findById" resultMap="UserResultMap">
         SELECT u.id as user_id,
-        u.name as user_password,
+        u.name as user_name,
         u.username as user_username,
         u.password as user_password,
         ur.role as user_role_role,

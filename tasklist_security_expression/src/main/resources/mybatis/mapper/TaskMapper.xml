@@ -27,7 +27,7 @@
         SELECT t.id as task_id,
         t.title as task_title,
         t.description as task_description,
-        t.expiration_date as task_expiration_date,
+        t.expirationDate as task_expiration_date,
         t.status as task_status
         FROM tasks t
         JOIN users_tasks ut on t.id = ut.task_id
@@ -43,7 +43,7 @@
         UPDATE tasks
         SET title = #{title},
         description = #{description},
-        expiration_date = #{expiration_date},
+        expiration_date = #{expirationDate},
         status = #{status}
         WHERE id =#{id}
     </update>
@@ -55,7 +55,7 @@
 
     <insert id="create" keyProperty="id" keyColumn="id" useGeneratedKeys="true">
         INSERT INTO tasks (title, description, expiration_date, status)
-        VALUES (#{title}, #{description}, #{expiration_date}, #{status})
+        VALUES (#{title}, #{description}, #{expirationDate}, #{status})
     </insert>
 
 </mapper>
